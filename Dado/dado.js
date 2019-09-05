@@ -1,49 +1,31 @@
-class Dado{
-    constructor(){
-        this.caras = [1,2,3,4,5,6];
-    }
-    lanzar(){
-        return Math.floor(Math.random()*6 +1)
+class Dado {
+    constructor() {}
+    lanzar() {
+        /*Math.random()= siempre es un numero entre el 0 y .99...; lo que hacemos es que se muntiplica 
+        *6 para que de de 0-5.9999 y sumamos +1 para que inicie en 1, 
+        Math.floor = math.trunc */
+        return Math.floor((Math.random() * 6) + 1)
     }
 }
-let btnLanzar = document.querySelector("#lanzar").addEventListener("click",()=>{
-    dado1 = new Dado();
-    let suma = 0 ;
-    let cara1 = 0;
-    let cara2 = 0;
-    let cara3 = 0;
-    let cara4 = 0;
-    let cara5 = 0;
-    let cara6 = 0;
-    for(i=1; i<=100; i++){
-        let contador = dado1.lanzar();
-        if(contador === 1){
-            cara1 += 1;
-            //return cara1;
-        }
-        if(contador === 2){
-            cara2 += 1;
-            //return cara2;
-        }
-        if(contador === 3){
-            cara3 += 1;
-            //return cara3;
-        }
-        if(contador === 4){
-            cara4 += 1;
-            //return cara4;
-        }
-        if(contador === 5){
-            cara5 += 1;
-            //return cara5;
-        }
-        if(contador === 6){
-            cara6 += 1;
-            //return cara6;
-        }
-        console.log(contador);
+
+let caras = [0, 0, 0, 0, 0, 0];
+let dado1 = new Dado();
+
+let btnLanzar = document.querySelector("#lanzar").addEventListener("click", () => {
+    for (i = 1; i <= 100; i++) {
+        //dado1.lanzar(), lo cual es el numero al azar de 1-6 
+        sumacaras(dado1.lanzar());
     }
-    suma = cara1 +cara2 +cara3+ cara4 +cara5 +cara6;
-    console.log(suma);
-        
+    carasContador();
 })
+
+function sumacaras(number) {
+    //Los numeros normales tienen que empezar en el vector[0] hasta vector [5]
+    caras[number - 1]++;
+}
+
+function carasContador() {
+    for (var i = 0; i < 6; i++) {
+        console.log("La cara " + (i+1) + " se obtuvo " + caras[i]);
+    }
+}
