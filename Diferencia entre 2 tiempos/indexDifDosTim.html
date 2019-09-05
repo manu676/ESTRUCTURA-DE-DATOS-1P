@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Agenda Contacto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+/>
+<!-- <link rel="stylesheet" type="text/css" href="index.css" />   -->
+</head>
+<body>
+    <center>
+        <h1>Diferencia entre dos tiempos</h1>
+        <form>
+            <label> Inserte el tiempo de Entrada: </label>
+            <p>Horas y Minutos</p><input id="timeIn" type="time">
+            <p>Segundos</p><input id="timeInS" type="number">
+            <br>
+            <br>
+            <label> Inserte el tiempo de salida: </label>
+            <p>Horas y Minutos</p><input id="timeOut" type="time">
+            <p>Segundos</p><input id="timeOutS" type="number">
+            <br>
+            <button id="btnCalcular" type="button">Calcular Diferencia</button>
+            <br>
+            <a for="result">La diferencia seria de: </a>
+            <input id="result" type="text">
+        </form>
+    </center>
+</body>
+<script src="difDosTiempos.js"></script>
+</html>
