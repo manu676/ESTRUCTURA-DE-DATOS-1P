@@ -14,8 +14,8 @@ class Competicion extends Corredor{
     carrera(){
         let liebre = this._liebre
         let tortuga = this._tortuga
-        //while(this._posicion <90){
-        for(let i=0; i<=30; i++){
+        while(liebre.posicion <90 && tortuga.posicion <90){
+        //for(let i=0; i<=30; i++){
             liebre.avanzarL();
             console.log("Liebre " + liebre.posicion);
             tortuga.avanzarT();
@@ -26,17 +26,11 @@ class Competicion extends Corredor{
 let btnAvanzar = document.querySelector("#competicion").addEventListener("click", () => {
     let carrera1 = new Competicion();   
     carrera1.carrera();
-    /*while (liebre.posicion <90 && tortuga.posicion <90){
-        liebre.avanzarL();
-        console.log("Liebre " + liebre._posicion);
-        tortuga.avanzarT();
-        console.log("Tortuga " + tortuga.posicion);
-    }*/
-    /*if(liebre.posicion >89 && tortuga.posicion >89){
+    if(liebre.posicion >89 && tortuga.posicion >89){
         console.log("Ambos han ganado");
     }
     else if(liebre.posicion <= tortuga.posicion){
         console.log("La tortuga ha ganado");
     }else (liebre.posicion >= tortuga.posicion)
-        console.log("La liebre ha ganado");*/
+        console.log("La liebre ha ganado");
 })
