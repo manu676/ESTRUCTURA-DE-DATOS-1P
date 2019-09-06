@@ -1,33 +1,29 @@
-import Azar from "./numeroAzar.js";
-//import Corredor from "./Carrera/corredor";
+//import Azar from "./numeroAzar.js";
+import Corredor from "./corredor.js";
 
-export default class Tortuga{
-    constructor(){
-        this._contador = 0;
-        this._numeroazar = new Azar();
-    }
-    get contador(){
-        return this._contador;
+export default class Tortuga extends Corredor{
+    constructor(posicion){
+        super(posicion);
     }
     avanzarT(){
         let numeroAzar = this._numeroazar.aleatorio();
-        if (numeroAzar <=5){
-            this._contador +=3;
+        if (numeroAzar <=50){
+            this._posicion +=3;
         }
-        else if (numeroAzar === 6 || numeroAzar === 7){
-            this._contador -=6;
+        else if (numeroAzar >50 && numeroAzar <=70){
+            this._posicion -=6;
         }
         else{
-            this._contador++;
+            this._posicion++;
         }
         console.log(numeroAzar);
     }
 }
 let btnTortuga = document.querySelector("#tortuga")
 .addEventListener("click", () => {
-    let t1 = new Tortuga;
+    let t1 = new Tortuga();
     for(let i=0; i <=5; i++){
         t1.avanzarT();
-        console.log("Tortuga posicion es: "+ t1.contador);
+        console.log("Tortuga posicion es: "+ t1.posicion);
     }
 })

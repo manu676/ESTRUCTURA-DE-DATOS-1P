@@ -6,7 +6,7 @@ export default class Azar {
         /*Math.random()= siempre es un numero entre el 0 y .99...; lo que hacemos es que se muntiplica 
         *6 para que de de 0-5.9999 y sumamos +1 para que inicie en 1, 
         Math.floor = math.trunc */
-        return(Math.trunc(Math.random(this._azar)*10) +1);  
+        return(Math.trunc(Math.random(this._azar)*100) +1);  
     }
 }
 let btnNumeroAzar = document.querySelector("#aleatorio").addEventListener("click", () => {
