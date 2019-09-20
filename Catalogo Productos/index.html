@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Agenda Contacto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+/>
+</head>
+<body>
+    <h1>Historial de Inventario</h1>
+    <div id="inventarioTexto"></div>
+    <br>
+    <br>
+    <h1>Buscar Producto</h1>
+    <input id="buscar" type="text">
+    <br>
+    <br>
+    <button id="btnBuscar" type="button">Buscar</button>
+    <br>
+    <h1>Eliminar Producto</h1>
+    <input id="eliminar" type="text">
+    <br>
+    <br>
+    <button id="btnEliminar" type="button">Eliminar</button>
+    <br>
+    <br>
+    <div id="resultadoEliminar"></div>
+    <div id="resultadoBusqueda"></div>    
+    <br>
+    <h1>Registro de Producto Nuevo</h1>
+    <form>
+        <label>Codigo del Producto </label>
+        <input id="codigo" type="number">
+        <br>
+        <label>Nombre Producto </label>
+        <input id="nombre" type="text/number">
+        <br>
+        <label>Precio</label>
+        <input id="precio" type="number">
+        <br>
+        <label>Cantidad</label>
+        <input id="cantidad" type="number">
+        <br>
+        <label>Descripcion</label>
+        <input id="descripcion" type="text">
+        <br>
+        <button id="btnAgregar" type="button">Agregar</button>
+        <br>
+        <label>Posicion</label>
+        <input id="posicion" type="number">
+        <br>
+        <button id="btnInsertar" type="button">Insertar</button>
+        <br>
+    </form>
+    <table>
+
+    </table>
+</body>
+<script src="./producto.js" type="module"></script>
+<script src="./inventario.js" type="module"></script>
+<script src="./main.js" type="module"></script>
+</html>
